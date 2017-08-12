@@ -1,0 +1,106 @@
+@import "../base/colors";
+@import "../utils/flex";
+@import "../utils/decorators";
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0 13px;
+  background: @color-bg--btn;
+  background-clip: border-box;
+  border: 1px solid @color-border--btn;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: @color-text--btn;
+  color: @color-text--muted;
+  white-space: normal;
+  user-select: none;
+  transition: color 0.05s linear, background-color 0.05s linear;
+
+  &.center {
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+  }
+
+  &.transparent {
+    background: none;
+    border-color: transparent;
+
+    &:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+  }
+
+  &:hover {
+    background: @color-bg--btn-hover;
+  }
+
+  i {
+    margin-left: 4px;
+  }
+
+  &.primary {
+    background: @color-bg--btn-primary;
+    background: #0070d2;
+    border-color: transparent;
+    color: #fff;
+
+    &:hover {
+      background: @color-bg--btn-primary-hover;
+    }
+
+    &:disabled {
+      background: @color-bg--btn-primary-disabled;
+    }
+  }
+
+  &.primary.outline {
+    background: #fff;
+    border-color: @color-border--primary;
+    color: @color-border--primary;
+
+    &:hover {
+      border-color: @color-border--primary-hover;
+      color: @color-border--primary-hover;
+    }
+  }
+
+  &.success {
+    background: @color-bg--btn-success;
+    color: #fff;
+    border-color: transparent;
+
+    &:hover {
+      background: @color-bg--btn-success-hover;
+    }
+  }
+
+  &.success.outline {
+    background: #fff;
+    border-color: @color-border--success;
+    color: @color-border--success;
+
+    &:hover {
+      border-color: @color-border--success-hover;
+      color: @color-border--success-hover;
+    }
+  }
+
+  .destructive {
+    border-color: transparent;
+  }
+
+  &.destructive.outline {
+    background: #fff;
+    border-color: @color-border--destructive;
+    color: @color-border--destructive;
+
+    &:hover {
+      border-color: @color-border--destructive-hover;
+      color: @color-border--destructive-hover;
+    }
+  }
+}
